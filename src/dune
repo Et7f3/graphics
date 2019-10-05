@@ -21,9 +21,10 @@ let () =
 (library
  (public_name graphics)
  (wrapped false)
+ (c_flags -I/opt/X11/include)
  (synopsis "Portable drawing primitives")
  (c_names %s)
- (c_library_flags %s))
+ (c_library_flags %s -L/opt/X11/lib))
 
 (copy_files# %s/*)
 |}
